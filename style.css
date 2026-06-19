@@ -7,7 +7,7 @@
   --muted: #66736f;
   --card: #ffffff;
   --shadow: 0 18px 50px rgba(0, 63, 51, 0.12);
-  --radius: 24px;
+  --radius: 10px;
 }
 
 * {
@@ -45,7 +45,7 @@ button,
 .btn-primary {
   background: var(--primary);
   border-color: var(--primary);
-  border-radius: 5px;
+  border-radius: var(--radius);
   box-shadow: 0 8px 20px rgb(133, 130, 130, 0.5);
 }
 
@@ -57,18 +57,6 @@ nav strong {
   align-items: center;
   gap: 0.75rem;
 }
-
-/* .brand-mark {
-  width: 42px;
-  height: 42px;
-  border: 3px solid var(--primary);
-  border-radius: 15px;
-  display: grid;
-  place-items: center;
-  color: var(--primary);
-  font-size: 1.4rem;
-  background: white;
-} */
 
 .brand {
   display: flex;
@@ -138,7 +126,7 @@ h1 {
 
 .hero-card {
   background: white;
-  border-radius: 24px;
+  border-radius: var(--radius);
   padding: 1rem;
   box-shadow: var(--shadow);
   transform: rotate(1.2deg);
@@ -150,21 +138,15 @@ h1 {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-radius: 24px;
+  border-radius: var(--radius);
 }
 
 figure {
   margin: 0;
   overflow: hidden;
-  border-radius: 24px;
+  border-radius: var(--radius);
   box-shadow: var(--shadow);
 }
-
-/* figcaption {
-  font-size: 0.78rem;
-  color: var(--muted);
-  padding: 0.5rem 0.2rem 0;
-} */
 
 .section {
   padding: 5.5rem 0;
@@ -211,20 +193,31 @@ h3 {
   width: 100%;
   height: 210px;
   object-fit: cover;
-  border-radius: 18px;
+  border-radius: var(--radius);
   margin-bottom: 1rem;
+}
+
+.card-intro-container {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+
+.card-intro-container h3 {
+  margin-bottom: 0;
 }
 
 .icon {
   width: 52px;
   height: 52px;
-  border-radius: 18px;
+  border-radius: var(--radius);
   background: #e8f2ed;
   color: var(--primary);
   display: grid;
   place-items: center;
   font-size: 1.45rem;
-  margin-bottom: 1rem;
 }
 
 .steps {
@@ -280,7 +273,7 @@ h3 {
 .mission-img-container figure {
   margin: 0;
   overflow: hidden;
-  border-radius: 25px;
+  border-radius: var(--radius);
   box-shadow: var(--shadow);
 }
 
@@ -289,7 +282,7 @@ h3 {
   height: 280px;
   object-fit: cover;
   display: block;
-  border-radius: 25px;
+  border-radius: var(--radius);
 }
 
 .checklist {
@@ -303,7 +296,7 @@ h3 {
 .checklist li {
   list-style: none;
   background: white;
-  border-radius: 16px;
+  border-radius: var(--radius);
   padding: 0.9rem 1rem;
   box-shadow: 0 8px 24px rgba(0, 63, 51, 0.07);
 }
@@ -318,7 +311,7 @@ h3 {
 .cta-box {
   background: linear-gradient(135deg, var(--primary-dark), var(--primary));
   color: white;
-  border-radius: 32px;
+  border-radius: var(--radius);
   padding: 3rem;
   box-shadow: var(--shadow);
 }
@@ -341,10 +334,34 @@ section[aria-label='Subscribe example'] {
 }
 
 section[aria-label='Subscribe example'] article {
-  border-radius: 32px;
+  border-radius: var(--radius);
   box-shadow: var(--shadow);
   border: 0;
   background: white;
+}
+
+#kontakt input {
+  border-radius: 999px;
+  border: 1px solid rgba(0, 107, 87, 0.18);
+  background: #f8fbf7;
+  padding: 1rem 1.2rem;
+  font-size: 1rem;
+  color: var(--text);
+  box-shadow: none;
+  transition:
+    border-color 0.25s ease,
+    box-shadow 0.25s ease,
+    background 0.25s ease;
+}
+
+#kontakt input::placeholder {
+  color: #8a9692;
+}
+
+#kontakt input:focus {
+  border-color: var(--primary);
+  background: #ffffff;
+  box-shadow: 0 0 0 4px rgba(0, 107, 87, 0.12);
 }
 
 footer.container {
@@ -363,7 +380,7 @@ footer.container {
   background: #e8f2ed;
   color: var(--primary-dark);
   padding: 0.55rem 0.9rem;
-  border-radius: 999px;
+  border-radius: var(--radius);
   font-weight: 700;
   font-size: 0.9rem;
 }
@@ -516,24 +533,6 @@ button:hover {
   box-shadow: 0 8px 20px rgba(80, 82, 81, 0.2);
   transition: all 0.3 linear;
 }
-
-/* .hero-actions a[role='button'] {
-  animation: softPulse 2.8s ease-in-out infinite;
-} */
-
-/* @keyframes softPulse {
-  0% {
-    box-shadow: 0 8px 20px rgba(0, 107, 87, 0.2);
-  }
-
-  50% {
-    box-shadow: 0 12px 34px rgba(0, 107, 87, 0.34);
-  }
-
-  100% {
-    box-shadow: 0 8px 20px rgba(0, 107, 87, 0.2);
-  }
-} */
 
 .badge {
   animation: badgeIn 0.7s ease both;
