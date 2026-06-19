@@ -36,7 +36,7 @@ nav.container-fluid {
 
 nav a {
   color: grey;
-  font-weight: 600;
+  font-weight: 500;
   text-transform: uppercase;
 }
 
@@ -58,6 +58,12 @@ nav strong {
   gap: 0.75rem;
 }
 
+nav li {
+  display: inline-block;
+  margin: 0;
+  padding: 0.75rem;
+}
+
 .brand {
   display: flex;
   align-items: center;
@@ -65,7 +71,7 @@ nav strong {
 
 .nav-logo {
   width: 190px;
-  height: auto;
+  height: 100px;
   display: block;
   object-fit: contain;
 }
